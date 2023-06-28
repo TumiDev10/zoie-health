@@ -6,6 +6,7 @@ import FavoriteMeals from "./components/FavoriteMeals";
 import MealDetails from "./components/MealDetails";
 import SearchForm from "./components/SearchForm";
 import AllRecipes from "./components/AllRecipes";
+import "./App.css";
 
 function App() {
   return (
@@ -25,7 +26,6 @@ function App() {
               Recipes
             </Link>
           </Nav>
-          {/* <SearchForm /> */}
         </Navbar.Collapse>
       </Navbar>
 

@@ -1,0 +1,38 @@
+.search-form {
+    margin-bottom: 16px;
+  }
+  
+  .search-form__input {
+    width: 200px;
+    margin-right: 8px;
+  }
+  
+  .search-form__submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .search-results {
+    margin-top: 16px;
+  }
+  
+  .search-results__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .search-results__item {
+    margin-bottom: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-results__item:hover {
+    background-color: #f8f8f8;
+  }
+  

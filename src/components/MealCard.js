@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import { saveMealLS } from "../utils/localStorage";
 import "./MealCard.css";
 
 function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
+  const [showDetails, setShowDetails] = useState(false);
+
   const ingredients = [];
 
   for (let i = 1; i <= 20; i++) {
@@ -21,6 +23,10 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
     saveMealLS(meal.idMeal);
   };
 
+  const toggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
   return (
     <div className="meal-card">
       <div className="meal-card__header">
@@ -31,33 +37,37 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
         />
         <div className="meal-card__buttons">
           {showDetailsButton && (
-            <Link to={`/meal/${meal.idMeal}`} className="btn btn-primary">
-              View Details
-            </Link>
+            <Button variant="primary" onClick={toggleDetails}>
+              {showDetails ? "Hide Details" : "View Details"}
+            </Button>
           )}
           {removeMeal && (
-            <button className="btn btn-danger" onClick={removeMeal}>
+            <Button variant="danger" onClick={removeMeal}>
               Remove
-            </button>
+            </Button>
           )}
           {showLikeButton && (
-            <button className="btn btn-primary" onClick={handleLikeClick}>
+            <Button variant="primary" onClick={handleLikeClick}>
               Like
-            </button>
+            </Button>
           )}
         </div>
       </div>
       <div className="meal-card__body">
         <h4 className="meal-card__title">{meal.strMeal}</h4>
-        <h5 className="meal-card__subtitle">Ingredients:</h5>
-        <ul className="meal-card__ingredient-list">
-          {ingredients.map((ingredient, index) => (
-            <li key={index} className="meal-card__ingredient-item">
-              {ingredient}
-            </li>
-          ))}
-        </ul>
-        <p className="meal-card__instructions">{meal.strInstructions}</p>
+        {showDetails && (
+          <>
+            <h5 className="meal-card__subtitle">Ingredients:</h5>
+            <ul className="meal-card__ingredient-list">
+              {ingredients.map((ingredient, index) => (
+                <li key={index} className="meal-card__ingredient-item">
+                  {ingredient}
+                </li>
+              ))}
+            </ul>
+            <p className="meal-card__instructions">{meal.strInstructions}</p>
+          </>
+        )}
       </div>
     </div>
   );

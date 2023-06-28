@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Form, FormControl, Button } from "react-bootstrap";
 import MealCard from "./MealCard";
+import "./SearchForm.css";
 
 function SearchForm() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,27 +26,35 @@ function SearchForm() {
   };
 
   return (
-    <div>
+    <div className="search-form">
       <Form inline onSubmit={handleSubmit}>
         <FormControl
+          className="search-form__input"
           type="text"
           placeholder="Search"
-          className="mr-sm-2"
           value={searchTerm}
           onChange={handleInputChange}
         />
-        <Button type="submit" variant="outline-primary">
+        <Button
+          className="search-form__submit-button"
+          type="submit"
+          variant="primary"
+        >
           Search
         </Button>
       </Form>
 
-      <div className="mt-4">
+      <div className="search-results">
         {searchResults.length > 0 ? (
-          searchResults.map((meal) => (
-            <MealCard key={meal.idMeal} meal={meal} showDetailsButton />
-          ))
+          <ul className="search-results__list">
+            {searchResults.map((meal) => (
+              <li key={meal.idMeal} className="search-results__item">
+                <MealCard meal={meal} showDetailsButton />
+              </li>
+            ))}
+          </ul>
         ) : (
-          <p>No search results found.</p>
+          <p></p>
         )}
       </div>
     </div>
