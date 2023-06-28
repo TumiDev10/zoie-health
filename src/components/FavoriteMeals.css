@@ -1,0 +1,10 @@
+.favorite-meals {
+    padding: 16px;
+  }
+  
+  .meal-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+    gap: 16px;
+  }
+  

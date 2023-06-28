@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MealCard from "./MealCard";
 import { getMealsLS, getMealById, removeMealLS } from "../utils/localStorage";
+import "./FavoriteMeals.css";
 
 function FavoriteMeals() {
   const [favoriteMeals, setFavoriteMeals] = useState([]);
@@ -26,21 +27,24 @@ function FavoriteMeals() {
   };
 
   return (
-    <div>
+    <div className="favorite-meals">
       <h2>Favorite Meals</h2>
-      {favoriteMeals.length > 0 ? (
-        favoriteMeals.map((meal) => (
-          <MealCard
-            key={meal.idMeal}
-            meal={meal}
-            showDetailsButton
-            removeMeal={() => removeMeal(meal.idMeal)}
-            showLikeButton={false}
-          />
-        ))
-      ) : (
-        <p>No favorite meals found.</p>
-      )}
+      <div className="meal-card-list">
+        {favoriteMeals.length > 0 ? (
+          favoriteMeals.map((meal) => (
+            <MealCard
+              key={meal.idMeal}
+              meal={meal}
+              showDetailsButton
+              removeMeal={() => removeMeal(meal.idMeal)}
+              showLikeButton={false}
+              smallerCard
+            />
+          ))
+        ) : (
+          <p>No favorite meals found.</p>
+        )}
+      </div>
     </div>
   );
 }

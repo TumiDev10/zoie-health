@@ -46,15 +46,18 @@ function SearchForm() {
 
       <div className="search-results">
         {searchResults.length > 0 ? (
-          <ul className="search-results__list">
+          <div className="meal-card-grid">
             {searchResults.map((meal) => (
-              <li key={meal.idMeal} className="search-results__item">
-                <MealCard meal={meal} showDetailsButton />
-              </li>
+              <MealCard
+                key={meal.idMeal}
+                meal={meal}
+                showDetailsButton
+                smallerCard
+              />
             ))}
-          </ul>
+          </div>
         ) : (
-          <p></p>
+          <p>No search results found.</p>
         )}
       </div>
     </div>

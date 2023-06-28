@@ -1,5 +1,6 @@
 .search-form {
     margin-bottom: 16px;
+    
   }
   
   .search-form__input {
@@ -35,4 +36,36 @@
   .search-results__item:hover {
     background-color: #f8f8f8;
   }
+
+  .search-results {
+    margin-top: 16px;
+  }
+  
+  .meal-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .search-form__input {
+    width: 100%;
+    margin-right: 10px;
+  }
+  
+  .search-form__submit-button {
+    margin-top: 1%;
+    background-color: #A77FB9;
+    border: none;
+  }
+  
+  .search-results {
+    margin-top: 16px;
+  }
+  
+  .meal-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
   

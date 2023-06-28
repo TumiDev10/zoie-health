@@ -12,6 +12,21 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
   }
+
+  .all-recipes {
+    padding: 16px;
+  }
+  
+  .meal-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(234px, 1fr));
+    gap: 16px;
+  }
+
+  h2{
+    text-align: center;
+  }
+  
   
   @media (max-width: 768px) {
     .all-recipes__grid {
