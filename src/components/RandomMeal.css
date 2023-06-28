@@ -1,0 +1,35 @@
+.random-meal {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .random-meal__title {
+    font-size: 24px;
+    color: #ff4081;
+    margin-bottom: 20px;
+  }
+  
+  .random-meal__content {
+    margin-bottom: 20px;
+  }
+  
+  .random-meal__loading {
+    color: #ff4081;
+    font-style: italic;
+  }
+  
+  .random-meal__button {
+    background-color: #ff4081;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .random-meal__button--new-meal {
+    background-color: #ff4081;
+    margin-top: 10px;
+  }
+  
