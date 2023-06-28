@@ -3,12 +3,13 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import { FaSmile } from "react-icons/fa";
-import { MdLocalDining } from "react-icons/md";
+
 import RandomMeal from "./components/RandomMeal";
 import FavoriteMeals from "./components/FavoriteMeals";
 import MealDetails from "./components/MealDetails";
 import AllRecipes from "./components/AllRecipes";
 import logo from "./img/zoie.png";
+import headerImage from "./img/Header.png";
 import "./App.css";
 
 function App() {
@@ -34,14 +35,7 @@ function App() {
         </Navbar.Collapse>
       </Navbar>
 
-      <div className="header" style={{backgroundColor: 'rgb(243 230 237=2)'}}>
-        <h2 className="header__title" style={{textAlign: 'center'}}>
-          Welcome to Zoie Health <FaSmile className="header__icon" />
-        </h2>
-        <p className="header__message" style={{textAlign: 'center'}}>
-          Discover delicious recipes for a healthier lifestyle <MdLocalDining className="header__icon" />
-        </p>
-      </div>
+      
 
       <div className="container mt-4">
         <Switch>

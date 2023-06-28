@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Button, Alert } from "react-bootstrap";
+import { Button, Alert, Modal } from "react-bootstrap";
 import { saveMealLS } from "../utils/localStorage";
 import "./MealCard.css";
 
 function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton, smallerCard }) {
   const [showDetails, setShowDetails] = useState(false);
   const [showMessage, setShowMessage] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const ingredients = [];
 
@@ -28,13 +29,18 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton, smaller
     setShowDetails(!showDetails);
   };
 
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <div className={`meal-card ${smallerCard ? "meal-card--small" : ""}`}>
       <div className="meal-card__header">
         <img
-          className="meal-card__image"
+          className={`meal-card__image ${smallerCard ? "meal-card__image--small" : ""}`}
           src={meal.strMealThumb}
           alt={meal.strMeal}
+          onClick={toggleModal}
         />
         <div className="meal-card__buttons">
           {showDetailsButton && (
@@ -75,6 +81,15 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton, smaller
           Meal added to favorites!
         </Alert>
       )}
+      <Modal show={showModal} onHide={toggleModal} centered>
+        <Modal.Body>
+          <img
+            className="meal-card__modal-image"
+            src={meal.strMealThumb}
+            alt={meal.strMeal}
+          />
+        </Modal.Body>
+      </Modal>
     </div>
   );
 }
