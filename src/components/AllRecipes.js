@@ -4,23 +4,10 @@ import SearchForm from "./SearchForm";
 import "./AllRecipes.css";
 
 function AllRecipes() {
-  const [recipes, setRecipes] = useState([]);
+  const [recipes] = useState([]);
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-//   useEffect(() => {
-//     fetchRandomRecipes();
-//   }, []);
-
-//   const fetchRandomRecipes = async () => {
-//     const response = await fetch(
-//       "https://www.themealdb.com/api/json/v1/1/random.php"
-//     );
-//     const data = await response.json();
-//     const meals = data.meals;
-//     setRecipes(meals || []);
-//     setFilteredRecipes(meals || []);
-//   };
 
   const handleSearch = (event) => {
     const searchTerm = event.target.value.toLowerCase();
