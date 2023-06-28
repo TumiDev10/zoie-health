@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.active-tab {
+  background-color: #A77FB9;
+  border-radius: 40px;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

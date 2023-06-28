@@ -1,20 +1,18 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
-import { FaSmile } from "react-icons/fa";
-
 import RandomMeal from "./components/RandomMeal";
 import FavoriteMeals from "./components/FavoriteMeals";
 import MealDetails from "./components/MealDetails";
 import AllRecipes from "./components/AllRecipes";
 import logo from "./img/zoie.png";
-import headerImage from "./img/Header.png";
+import background from './img/background.jpeg'
 import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <Router >
       <Navbar expand="lg" style={{ backgroundColor: 'rgb(243 230 238)'}}>
         <Navbar.Brand href="/">
           <img src={logo} alt="Zoie Health Logo" className="logo-image" style={{ width: '15%', marginLeft: '50px' }} />
@@ -22,20 +20,18 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto"  >
-            <Link to="/" className="nav-link" style={{marginLeft: '-70%'}}>
+            <NavLink exact to="/" className="nav-link" style={{marginLeft: '-70%'}} activeClassName="active-tab">
               Home
-            </Link>
-            <Link to="/favorites" className="nav-link" style={{marginLeft: '30%'}}>
+            </NavLink>
+            <NavLink to="/favorites" className="nav-link" style={{marginLeft: '30%'}} activeClassName="active-tab">
               Favorites
-            </Link>
-            <Link to="/allrecipes" className="nav-link" style={{ backgroundColor: '#A77FB9', borderRadius: '40px', marginLeft: '30%' }}>
+            </NavLink>
+            <NavLink to="/allrecipes" className="nav-link" style={{ marginLeft: '30%' }} activeClassName="active-tab">
               Recipes
-            </Link>
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-
-      
 
       <div className="container mt-4">
         <Switch>
