@@ -1,18 +1,21 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
 import RandomMeal from "./components/RandomMeal";
 import FavoriteMeals from "./components/FavoriteMeals";
 import MealDetails from "./components/MealDetails";
-import SearchForm from "./components/SearchForm";
 import AllRecipes from "./components/AllRecipes";
+import logo from "./img/zoie.jpeg";
 import "./App.css";
 
 function App() {
   return (
     <Router>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">Zoie Health</Navbar.Brand>
+        <Navbar.Brand href="/">
+          <img src={logo} alt="Zoie Health Logo" className="logo-image" style={{width: '15%', marginLeft: '10px'}}/>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

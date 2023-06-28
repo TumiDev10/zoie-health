@@ -5,7 +5,7 @@
   
   .random-meal__title {
     font-size: 24px;
-    color: #ff4081;
+    color: #A77FB9;
     margin-bottom: 20px;
   }
   
@@ -14,12 +14,12 @@
   }
   
   .random-meal__loading {
-    color: #ff4081;
+    color: #A77FB9;
     font-style: italic;
   }
   
   .random-meal__button {
-    background-color: #ff4081;
+    background-color: #A77FB9;
     color: #fff;
     font-size: 16px;
     padding: 10px 20px;
@@ -29,7 +29,7 @@
   }
   
   .random-meal__button--new-meal {
-    background-color: #ff4081;
+    background-color: #A77FB9;
     margin-top: 10px;
   }
   

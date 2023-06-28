@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Alert } from "react-bootstrap";
 import { saveMealLS } from "../utils/localStorage";
 import "./MealCard.css";
 
-function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
+function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton, smallerCard }) {
   const [showDetails, setShowDetails] = useState(false);
+  const [showMessage, setShowMessage] = useState(false);
 
   const ingredients = [];
 
@@ -21,6 +21,7 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
 
   const handleLikeClick = () => {
     saveMealLS(meal.idMeal);
+    setShowMessage(true);
   };
 
   const toggleDetails = () => {
@@ -28,7 +29,7 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
   };
 
   return (
-    <div className="meal-card">
+    <div className={`meal-card ${smallerCard ? "meal-card--small" : ""}`}>
       <div className="meal-card__header">
         <img
           className="meal-card__image"
@@ -42,12 +43,12 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
             </Button>
           )}
           {removeMeal && (
-            <Button variant="danger" onClick={removeMeal}>
+            <Button variant="danger" onClick={removeMeal} style={{backgroundColor: '#A77FB9'}}>
               Remove
             </Button>
           )}
           {showLikeButton && (
-            <Button variant="primary" onClick={handleLikeClick}>
+            <Button variant="primary" onClick={handleLikeClick} style={{backgroundColor: '#A77FB9'}}>
               Like
             </Button>
           )}
@@ -69,6 +70,11 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton }) {
           </>
         )}
       </div>
+      {showMessage && (
+        <Alert variant="success" className="meal-card__message">
+          Meal added to favorites!
+        </Alert>
+      )}
     </div>
   );
 }
