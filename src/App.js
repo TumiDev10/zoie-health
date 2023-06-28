@@ -2,19 +2,21 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
+import { FaSmile } from "react-icons/fa";
+import { MdLocalDining } from "react-icons/md";
 import RandomMeal from "./components/RandomMeal";
 import FavoriteMeals from "./components/FavoriteMeals";
 import MealDetails from "./components/MealDetails";
 import AllRecipes from "./components/AllRecipes";
-import logo from "./img/zoie.jpeg";
+import logo from "./img/zoie.png";
 import "./App.css";
 
 function App() {
   return (
     <Router>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg" style={{ backgroundColor: 'rgb(243 230 238)' }}>
         <Navbar.Brand href="/">
-          <img src={logo} alt="Zoie Health Logo" className="logo-image" style={{width: '15%', marginLeft: '10px'}}/>
+          <img src={logo} alt="Zoie Health Logo" className="logo-image" style={{ width: '15%', marginLeft: '50px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -25,12 +27,21 @@ function App() {
             <Link to="/favorites" className="nav-link">
               Favorites
             </Link>
-            <Link to="/allrecipes" className="nav-link">
+            <Link to="/allrecipes" className="nav-link" style={{ backgroundColor: '#A77FB9', borderRadius: '10px' }}>
               Recipes
             </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
+
+      <div className="header" style={{backgroundColor: 'rgb(243 230 237=2)'}}>
+        <h2 className="header__title" style={{textAlign: 'center'}}>
+          Welcome to Zoie Health <FaSmile className="header__icon" />
+        </h2>
+        <p className="header__message" style={{textAlign: 'center'}}>
+          Discover delicious recipes for a healthier lifestyle <MdLocalDining className="header__icon" />
+        </p>
+      </div>
 
       <div className="container mt-4">
         <Switch>

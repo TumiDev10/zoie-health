@@ -43,12 +43,12 @@ function MealCard({ meal, showDetailsButton, removeMeal, showLikeButton, smaller
             </Button>
           )}
           {removeMeal && (
-            <Button variant="danger" onClick={removeMeal} style={{backgroundColor: '#A77FB9'}}>
+            <Button variant="danger" onClick={removeMeal} style={{backgroundColor: '#A77FB9', border: 'none'}}>
               Remove
             </Button>
           )}
           {showLikeButton && (
-            <Button variant="primary" onClick={handleLikeClick} style={{backgroundColor: '#A77FB9'}}>
+            <Button variant="primary" onClick={handleLikeClick} style={{backgroundColor: '#A77FB9', border: 'none'}}>
               Like
             </Button>
           )}
