@@ -15,20 +15,20 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <Navbar expand="lg" style={{ backgroundColor: 'rgb(243 230 238)' }}>
+      <Navbar expand="lg" style={{ backgroundColor: 'rgb(243 230 238)'}}>
         <Navbar.Brand href="/">
           <img src={logo} alt="Zoie Health Logo" className="logo-image" style={{ width: '15%', marginLeft: '50px' }} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Link to="/" className="nav-link">
+          <Nav className="mr-auto"  >
+            <Link to="/" className="nav-link" style={{marginLeft: '-70%'}}>
               Home
             </Link>
-            <Link to="/favorites" className="nav-link">
+            <Link to="/favorites" className="nav-link" style={{marginLeft: '30%'}}>
               Favorites
             </Link>
-            <Link to="/allrecipes" className="nav-link" style={{ backgroundColor: '#A77FB9', borderRadius: '10px' }}>
+            <Link to="/allrecipes" className="nav-link" style={{ backgroundColor: '#A77FB9', borderRadius: '40px', marginLeft: '30%' }}>
               Recipes
             </Link>
           </Nav>
