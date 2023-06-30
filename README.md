@@ -53,4 +53,4 @@ b. src: Contains the React components and application logic.
  5. ThE Favorites page consists of all the meals you liked, you can press the "X" button to remove the meal from favorites.
  6. The Recipe page is where you search for the meals you want. You can search buy letter or name of the meal (eg: Chicken) 
 
- ![Zoie Health Recipe](img/Readme.png)
+ ![Zoie Health Recipe](./src/img/Readme.png)
