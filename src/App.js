@@ -6,6 +6,7 @@ import RandomMeal from "./components/RandomMeal";
 import FavoriteMeals from "./components/FavoriteMeals";
 import MealDetails from "./components/MealDetails";
 import AllRecipes from "./components/AllRecipes";
+import Home from "./components/Home";
 import logo from "./img/zoie.png";
 import background from './img/background.jpeg'
 import "./App.css";
@@ -20,7 +21,7 @@ function App() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto"  >
-            <NavLink exact to="/" className="nav-link" style={{marginLeft: '-70%'}} activeClassName="active-tab">
+            <NavLink exact to="/randommeal" className="nav-link" id="Home"  activeClassName="active-tab">
               Home
             </NavLink>
             <NavLink to="/favorites" className="nav-link" style={{marginLeft: '30%'}} activeClassName="active-tab">
@@ -35,7 +36,8 @@ function App() {
 
       <div className="container mt-4">
         <Switch>
-          <Route exact path="/" component={RandomMeal} />
+          <Route exact path='/' component={Home} />
+          <Route exact path="/randommeal" component={RandomMeal} />
           <Route path="/favorites" component={FavoriteMeals} />
           <Route path="/meal/:id" component={MealDetails} />
           <Route path="/allrecipes" component={AllRecipes} />
