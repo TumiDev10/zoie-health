@@ -52,3 +52,5 @@ b. src: Contains the React components and application logic.
  4. The heart icon adds the meal to "favorites", the heart will be red when the meal is added and it will display a message box.
  5. ThE Favorites page consists of all the meals you liked, you can press the "X" button to remove the meal from favorites.
  6. The Recipe page is where you search for the meals you want. You can search buy letter or name of the meal (eg: Chicken) 
+
+ ![Zoie Health Recipe](img/Readme.png)
