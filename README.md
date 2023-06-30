@@ -53,7 +53,7 @@ React Router DOM: A routing library that enables navigation and URL handling wit
 APIs: The app integrates with external APIs to fetch and display recipe data.
 Local Storage: The app utilizes local storage to store and retrieve user-specific data.
 
-** Instrucctions on how to use the app: **
+** Instructions on how to use the app: **
  1. THe navbar will show a purple color when the tab is pressed
  2. The Home pae is only for random meals, you can press the "Get New Meal" buton to get new random meals
  3. The "View Details" button displays the ingredients
