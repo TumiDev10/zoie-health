@@ -25,6 +25,7 @@ function AllRecipes() {
       setFilteredRecipes(filtered);
     }
   };
+  
 
   return (
     <div className="all-recipes">

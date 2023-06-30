@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# **React App**
+This repository contains a React app that showcases the basic setup and structure of a React application. Follow the instructions below to run the app on your local machine.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prerequisites
+Before running the React app, ensure that you have the following software installed:
 
-## Available Scripts
+-Node.js (version 10 or above)
+-npm (Node Package Manager, usually installed along with Node.js)
 
-In the project directory, you can run:
+**Getting Started**
+1. Clone this repository to your local machine using Git or download it as a ZIP file and extract it.
+-git clone <https://github.com/TumiDev10/zoie-health>
 
-### `npm start`
+2. Open a terminal or command prompt and navigate to the project's root directory.
+-cd react-app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Install the dependencies using npm.
+-npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. Once the installation is complete, start the development server.
+-npm start
+ 
+5. The app should now be running locally. Open your web browser and visit http://localhost:3000 to view it.
 
-### `npm test`
+**Folder Structure**
+The project structure is organized as follows:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+a. public: Contains the HTML template and static assets.
 
-### `npm run build`
+b. src: Contains the React components and application logic.
+  1. components: Contains reusable UI components.
+  2. App.js: The root component of the application.
+  3. index.js: The entry point of the application.
+  4. AllRecipes.js
+  5. FavoriteMeals.js
+  6. Home.js
+  7. MealCard.js
+  8. MealDetails.js
+  9. RandomMeal.js
+  10. SearchForm.js
+ 
+ c. utils: contains a local Storage that acts as a database
+ -localStorage.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ d. img contains images that were used througout the project
+ 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+** Instrucctions on how to use the app: **
+ 1. THe navbar will show a purple color when the tab is pressed
+ 2. The Home pae is only for random meals, you can press the "Get New Meal" buton to get new random meals
+ 3. The "View Details" button displays the ingredients
+ 4. The heart icon adds the meal to "favorites", the heart will be red when the meal is added and it will display a message box.
+ 5. ThE Favorites page consists of all the meals you liked, you can press the "X" button to remove the meal from favorites.
+ 6. The Recipe page is where you search for the meals you want. You can search buy letter or name of the meal (eg: Chicken) 
