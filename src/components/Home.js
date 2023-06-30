@@ -1,7 +1,7 @@
 import React from "react";
 import { FaUtensils, FaCalendarAlt, FaBookOpen, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import "./Home.css";
-import RandomMeal from "./RandomMeal";
+
 
 function Home() {
   return (
@@ -15,7 +15,7 @@ function Home() {
               className="img-fluid rounded"
               style={{ maxWidth: "80%", maxHeight: "80%" }}
             />
-            <a href="/RandomMeal" className="btn btn-primary mt-3">Discover Recipes</a>
+            <a href="/RandomMeal" className="btn btn-primary mt-3" id="btn">Discover Recipes</a>
           </div>
         </div>
         <div className="col-md-6 d-flex align-items-center">
