@@ -44,6 +44,14 @@ b. src: Contains the React components and application logic.
 
  d. img contains images that were used througout the project
  
+ # Technologies Used
+The React app incorporates several technologies to enhance its functionality and user experience:
+
+React.js: A popular JavaScript library for building user interfaces.
+Bootstrap: A CSS framework that provides pre-styled components and a responsive grid system.
+React Router DOM: A routing library that enables navigation and URL handling within a React app.
+APIs: The app integrates with external APIs to fetch and display recipe data.
+Local Storage: The app utilizes local storage to store and retrieve user-specific data.
 
 ** Instrucctions on how to use the app: **
  1. THe navbar will show a purple color when the tab is pressed
