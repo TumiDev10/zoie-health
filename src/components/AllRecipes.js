@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {              useState } from "react";
 import MealCard from "./MealCard";
 import SearchForm from "./SearchForm";
 import "./AllRecipes.css";
