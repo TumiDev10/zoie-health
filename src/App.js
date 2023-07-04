@@ -8,8 +8,8 @@ import MealDetails from "./components/MealDetails";
 import AllRecipes from "./components/AllRecipes";
 import Home from "./components/Home";
 import logo from "./img/zoie.png";
-import background from './img/background.jpeg'
 import "./App.css";
+import CategoriesPage from './components/Categories';
 
 function App() {
   return (
@@ -30,6 +30,9 @@ function App() {
             <NavLink to="/allrecipes" className="nav-link" style={{ marginLeft: '30%' }} activeClassName="active-tab">
               Recipes
             </NavLink>
+            <NavLink to="/categories" className="nav-link" style={{ marginLeft: '30%' }} activeClassName="active-tab">
+              Categories
+            </NavLink>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -41,6 +44,7 @@ function App() {
           <Route path="/favorites" component={FavoriteMeals} />
           <Route path="/meal/:id" component={MealDetails} />
           <Route path="/allrecipes" component={AllRecipes} />
+          <Route path="/categories" component={CategoriesPage} />
         </Switch>
       </div>
     </Router>
